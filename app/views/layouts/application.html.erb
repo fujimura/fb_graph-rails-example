@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FbGraphRailsExample</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>FbGraphRailsExample</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <div class="header">
+      <% if current_user %>
+        <p> <%= "Logged in as #{current_user.last_name} #{current_user.first_name}" %></p>
+        <p> <%= "your birthday is #{current_user.birthday}" if current_user %></p>
+      <% else %>
+        <p>not logged in</p>
+      <% end %>
+    </div>
 
-<% if current_user %>
-  <p> <%= "Logged in as #{current_user.last_name} #{current_user.first_name}" %></p>
-  <p> <%= "your birthday is #{current_user.birthday}" if current_user %></p>
-<% end %>
-</body>
+    <%= yield %>
+
+  </body>
 </html>

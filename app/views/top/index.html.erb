@@ -1,2 +1,22 @@
 <h1>FbGraph::Rails Example site</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Title</th>
+    <th>Body</th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= image_tag post.user.picture %><%= post.user.name %></td>
+    <td><%= post.title %></td>
+    <td><%= post.body %></td>
+    <td><%= link_to 'Show', post %></td>
+  </tr>
+<% end %>
+</table>
+
+
 <p><%= link_to "Manage Posts with Facebook Login", posts_path %></p>
