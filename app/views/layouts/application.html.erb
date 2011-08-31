@@ -8,10 +8,14 @@
   </head>
   <body>
 
-    <div class="header">
+    <div id="header">
       <% if current_user %>
-        <p> <%= "Logged in as #{current_user.last_name} #{current_user.first_name}" %></p>
-        <p> <%= "your birthday is #{current_user.birthday}" if current_user %></p>
+        <p>
+        <%= "Logged in as #{current_user.last_name} #{current_user.first_name}" %>
+        <%= "(from #{current_user.hometown.name})" %>
+        <%= link_to 'logout', logout_path %>
+        <%= link_to 'top', root_path %>
+        </p>
       <% else %>
         <p>not logged in</p>
       <% end %>
