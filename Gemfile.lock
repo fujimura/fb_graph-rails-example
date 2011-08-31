@@ -1,5 +1,7 @@
-PATH
-  remote: ~/fb_graph-rails
+GIT
+  remote: git@github.com:fujimura/fb_graph-rails.git
+  revision: 093f2e9ae28591f22e58d6fcd810d312a3bea214
+  branch: oauth2_support
   specs:
     fb_graph-rails (0.0.1)
       fb_graph (~> 1.9.0)

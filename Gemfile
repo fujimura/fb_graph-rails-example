@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
 
-gem 'fb_graph-rails', :path => '~/fb_graph-rails'
+gem 'fb_graph-rails', :git => 'git@github.com:fujimura/fb_graph-rails.git', :branch => 'oauth2_support'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
