@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  require_user_with :user_birthday
+  require_user_with :user_hometown
   # GET /posts
   # GET /posts.json
   def index

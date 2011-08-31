@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include FbGraph::Rails::User
-  facebook_attributes :last_name, :first_name, :birthday, :picture
+  facebook_attributes :last_name, :first_name, :hometown, :picture
 
   has_many :posts
 
