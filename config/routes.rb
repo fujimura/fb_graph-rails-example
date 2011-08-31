@@ -1,7 +1,4 @@
 FbGraphRailsExample::Application.routes.draw do
-  get "top/index"
-
-  resources :users
 
   resources :posts
 
