@@ -2,9 +2,9 @@
 
 <table>
   <tr>
+    <th>User</th>
     <th>Title</th>
     <th>Body</th>
-    <th>User</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,12 +12,17 @@
 
 <% @posts.each do |post| %>
   <tr>
+    <td><%= image_tag post.user.picture %><%= post.user.name %></td>
     <td><%= post.title %></td>
     <td><%= post.body %></td>
-    <td><%= post.user_id %></td>
     <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if current_user == post.user %>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% else %>
+      <td></td>
+      <td></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

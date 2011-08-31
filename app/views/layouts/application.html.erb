@@ -10,5 +10,9 @@
 
 <%= yield %>
 
+<% if current_user %>
+  <p> <%= "Logged in as #{current_user.last_name} #{current_user.first_name}" %></p>
+  <p> <%= "your birthday is #{current_user.birthday}" if current_user %></p>
+<% end %>
 </body>
 </html>
