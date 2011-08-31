@@ -1,6 +1,7 @@
 FbGraphRailsExample::Application.routes.draw do
 
   resources :posts
+  get 'logout', :to => 'top#logout'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

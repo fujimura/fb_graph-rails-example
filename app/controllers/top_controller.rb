@@ -3,4 +3,9 @@ class TopController < ApplicationController
     @posts = Post.all
   end
 
+  def logout
+    unauthenticate
+    redirect_to root_path
+  end
+
 end
