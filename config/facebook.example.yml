@@ -1,0 +1,5 @@
+development:
+  client_id: 999999999999999
+  client_secret: 9a999a9999999999a99999999a999999
+  canvas_url: http://apps.facebook.com/fb_graph-rails_example
+  site_url: http://l.com
